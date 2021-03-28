@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h3>Оформление каюты</h3>
+   <table>
+       <tr>
+           <td style="text-align: center;">Цвет стен</td>
+           <td style="text-align: center;">Эмблема</td>
+       </tr>
+       <tr>
+           <td style='background-color: {{ color }}; width: 300px;'></td>
+           <td>
+                {% if age < 21 %}
+                  <img src="/static/img/allien1.jpg" alt="not image">
+                {% else %}
+                    <img src="/static/img/allien2.png" alt="not image">
+                {% endif %}
+            </td>
+       </tr>
+   </table>
+{% endblock %}
